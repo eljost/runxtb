@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>770</width>
-    <height>432</height>
+    <height>550</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>runxtb</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -27,7 +27,60 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="geom_lineedit"/>
+         <widget class="QLineEdit" name="geom_lineedit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="charge_label">
+          <property name="text">
+           <string>Charge:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="charge_spinbox">
+          <property name="minimum">
+           <number>-99</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="uhf_label">
+          <property name="text">
+           <string>Unpaired electrons:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="uhf_spinbox"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QCheckBox" name="gfn_checkbox">
+          <property name="text">
+           <string>gfn</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="molden_checkbox">
+          <property name="text">
+           <string>molden</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -58,6 +111,24 @@
          </widget>
         </item>
        </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="xtbline_label">
+        <property name="text">
+         <string>xtb line:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="xtbline_lineedit">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
