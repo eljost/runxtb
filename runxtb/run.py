@@ -38,7 +38,9 @@ class XtbRunner(QtWidgets.QMainWindow, Ui_XtbRunnerWindow):
         self.status_bar.showMessage(message, 10000)
 
     def update_xtb_line(self):
-        self.xtbline_lineedit.setText("xtb " + " ".join(self.get_args()))
+        self.xtbline_lineedit.setText(
+            "xtb " + self.coords + " " + " ".join(self.get_args())
+        )
 
     def check_coords(self):
         # Don't do anything when it's a .xyz or coord file
@@ -70,7 +72,8 @@ class XtbRunner(QtWidgets.QMainWindow, Ui_XtbRunnerWindow):
 
     def run_xtb(self, arg):
         self.text = ""
-        self.process.start("xtb", self.get_args())
+        args = (*self.get_args(), arg)
+        self.process.start("xtb", args)
 
     def grad(self):
         self.run_xtb("-grad")
